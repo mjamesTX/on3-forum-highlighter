@@ -1,0 +1,26 @@
+.options {
+    font-size: 18px;
+}
+
+.option {
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    border-width: 2px;
+    border-color: lightgray;
+    border-style: solid;
+}
+
+.optionsButton {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.enabledText {
+    font-size: 20px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.reactionsInput {
+    width: 60px;
+}

@@ -6,12 +6,12 @@
   "content_scripts": [
     {
       "matches": ["https://www.on3.com/boards/threads/*"],
-      "js": ["src/content-script.js"]
+      "js": ["/src/content-script.js"]
     }
   ],
   "permissions": ["storage"],
   "action": {
-    "default_popup": "src/popup.html",
+    "default_popup": "/src/popup.html",
     "default_icon": {
       "16": "/images/on3-highlighter16.png",
       "48": "/images/on3-highlighter48.png",
@@ -22,5 +22,6 @@
     "16": "/images/on3-highlighter16.png",
     "48": "/images/on3-highlighter48.png",
     "128": "/images/on3-highlighter128.png"
-  }
+  },
+  "options_page": "/src/options.html"
 }

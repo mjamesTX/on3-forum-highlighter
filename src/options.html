@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="slider.css">
+  </head>
+  <body>
+    <div class="options">
+      <div class="option">
+      <span class="enabledText">Enabled: </span>
+        <label class="switch">
+          <input type="checkbox" id="enabledCheckbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="option">
+        Configure a whitelist of users whose posts your never want hidden:
+        <ul contenteditable="true" id="whitelist">
+          <li></li>
+        </ul>
+        <button class="optionsButton" id="whitelistSave">Save</button>
+        <button class="optionsButton" id="whitelistClear">Clear</button>
+        <button class="optionsButton" id="whitelistDefault">Default (Mods)</button>
+      </div>
+      <div class="option">
+        Minimum number of reactions: <input type="number" id="reactionsInput" class="reactionsInput" />
+      </div>
+    </div>
+  </body>
+  <script src="options.js"></script>
+</html>
