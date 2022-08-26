@@ -8,5 +8,9 @@
       "matches": ["https://www.on3.com/boards/threads/*"],
       "js": ["src/content-script.js"]
     }
-  ]
+  ],
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "src/popup.html"
+  }
 }
