@@ -1,0 +1,12 @@
+{
+  "name": "On3 Forum Highlighter",
+  "description": "Filter On3 forums posts to show only the highlights",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://www.on3.com/boards/threads/*"],
+      "js": ["src/content-script.js"]
+    }
+  ]
+}
