@@ -11,6 +11,16 @@
   ],
   "permissions": ["storage"],
   "action": {
-    "default_popup": "src/popup.html"
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "/images/on3-highlighter16.png",
+      "48": "/images/on3-highlighter48.png",
+      "128": "/images/on3-highlighter128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/on3-highlighter16.png",
+    "48": "/images/on3-highlighter48.png",
+    "128": "/images/on3-highlighter128.png"
   }
 }
