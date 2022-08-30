@@ -8,6 +8,7 @@
     border-width: 2px;
     border-color: lightgray;
     border-style: solid;
+    max-width: 900px;
 }
 
 .optionsButton {
