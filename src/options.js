@@ -1,17 +1,4 @@
-// These are copy/pasted between content-script.js and here because content scripts are
-// not type="module" so imports don't work. Seems to be a pain to work around, so I'm
-// just taking the disgusting approach of copy/paste these constants in both places
-const DEFAULT_ENABLED = true;
-const MODERATORS = [
-    'EricNahlin',
-    'Gerry Hamilton',
-    'IanBoyd',
-    'JoeCook',
-    'Justin Wells',
-    'Paul Wadlington',
-    'Tommy Yarrish'
-];
-const DEFAULT_MIN_REACTIONS = 10;
+import { DEFAULT_ENABLED, MODERATORS, DEFAULT_MIN_REACTIONS } from './constants.js';
 
 const whitelistElement = document.getElementById('whitelist');
 const enabledCheckbox = document.getElementById('enabledCheckbox');

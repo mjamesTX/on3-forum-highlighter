@@ -23,5 +23,11 @@
     "48": "/images/on3-highlighter48.png",
     "128": "/images/on3-highlighter128.png"
   },
-  "options_page": "/src/options.html"
+  "options_page": "/src/options.html",
+  "web_accessible_resources": [
+    {
+      "matches": ["https://www.on3.com/*"],
+      "resources": ["/src/*", "/images/*"]
+    }
+  ]
 }
