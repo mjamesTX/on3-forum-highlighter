@@ -34,6 +34,18 @@
     margin-right: 5px;
 }
 
+.modeSelect {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.modeSelectDocs {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
 .reactionsInput {
     width: 60px;
+    margin-left: 5px;
 }

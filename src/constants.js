@@ -11,3 +11,5 @@ export const MODERATORS = [
 ];
 
 export const DEFAULT_MIN_REACTIONS = 10;
+
+export const DEFAULT_MODE = 'Hide';

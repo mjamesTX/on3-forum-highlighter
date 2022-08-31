@@ -1,9 +1,15 @@
-import { DEFAULT_ENABLED, MODERATORS, DEFAULT_MIN_REACTIONS } from './constants.js';
+import { DEFAULT_ENABLED, MODERATORS, DEFAULT_MIN_REACTIONS, DEFAULT_MODE } from './constants.js';
+import { MODIFIERS } from './content-script-main.js';
 
+const modeSelect = document.getElementById('modeSelect');
 const whitelistElement = document.getElementById('whitelist');
 const enabledCheckbox = document.getElementById('enabledCheckbox');
 const reactionsInput = document.getElementById('reactionsInput');
 
+modeSelect.addEventListener('change', () => {
+    const mode = modeSelect.options[modeSelect.selectedIndex].value;
+    chrome.storage.sync.set({mode});
+})
 enabledCheckbox.addEventListener('click', () => {
     chrome.storage.local.set({enabled: enabledCheckbox.checked});
 })
@@ -37,7 +43,17 @@ function loadOptions() {
         enabledCheckbox.checked = enabled;
     });
 
-    chrome.storage.sync.get(null, ({whitelist = MODERATORS, minReactions = DEFAULT_MIN_REACTIONS}) => {
+    chrome.storage.sync.get(null, ({mode = DEFAULT_MODE, whitelist = MODERATORS, minReactions = DEFAULT_MIN_REACTIONS}) => {
+        Object.keys(MODIFIERS).forEach(modeOption => {
+            const option = document.createElement('option');
+            option.value = modeOption;
+            option.innerHTML = modeOption;
+            if (mode === modeOption) {
+                option.selected = true;
+            }
+            modeSelect.appendChild(option);
+        });
+
         Array.from(whitelistElement.getElementsByTagName('li')).forEach(li => {
             whitelistElement.removeChild(li);
         })
