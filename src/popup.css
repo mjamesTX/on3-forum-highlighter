@@ -3,9 +3,16 @@
 }
 
 .popup {
-    width: 160px;
+    width: 175px;
     background-color: white;
     padding: 15px
+}
+
+.popupTitle {
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 22px;
+    gap: 20px;
 }
 
 .enabledText {

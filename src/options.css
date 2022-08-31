@@ -11,6 +11,18 @@
     max-width: 900px;
 }
 
+.optionsTitle {
+    display: flex;
+    padding-bottom: 30px;
+    gap: 40px;
+}
+
+.optionsTitleText {
+    font-size: 75px;
+    display: flex;
+    align-items: center;
+}
+
 .optionsButton {
     font-size: 20px;
     margin-right: 20px;
