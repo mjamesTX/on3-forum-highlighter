@@ -3,6 +3,7 @@ export const DEFAULT_ENABLED = true;
 export const MODERATORS = [
     'EricNahlin',
     'Gerry Hamilton',
+    'BobbyBurton',
     'IanBoyd',
     'JoeCook',
     'Justin Wells',
