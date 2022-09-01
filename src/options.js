@@ -44,6 +44,7 @@ function loadOptions() {
     });
 
     chrome.storage.sync.get(null, ({mode = DEFAULT_MODE, whitelist = MODERATORS, minReactions = DEFAULT_MIN_REACTIONS}) => {
+        Array.from(modeSelect.children).forEach(option => modeSelect.removeChild(option));
         Object.keys(MODIFIERS).forEach(modeOption => {
             const option = document.createElement('option');
             option.value = modeOption;
@@ -54,9 +55,7 @@ function loadOptions() {
             modeSelect.appendChild(option);
         });
 
-        Array.from(whitelistElement.getElementsByTagName('li')).forEach(li => {
-            whitelistElement.removeChild(li);
-        })
+        Array.from(whitelistElement.getElementsByTagName('li')).forEach(li => whitelistElement.removeChild(li));
         whitelist.forEach(user => {
             const li = document.createElement('li');
             li.append(user);
