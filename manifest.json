@@ -1,7 +1,7 @@
 {
   "name": "On3 Forum Highlighter (Inside Texas)",
   "description": "Filter On3 forums posts to show only the highlights",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 3,
   "content_scripts": [
     {
